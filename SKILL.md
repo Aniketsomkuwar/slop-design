@@ -1,8 +1,7 @@
 ---
 name: slop-design
-description: Design reference contract of 245 AI slop anti-patterns across 18 categories (V/T/C/L/M/P/I/Q/X/A/D/S/R/B/F/DM/H/E) for AI agents to read BEFORE generating UI, paired with a construction workflow, motion/colour/type token tables, and a blocking pre-emit gate. Core objective — avoid low-effort AI-template tropes, boilerplate Bootstrap/SaaS defaults, and unstyled third-party widgets; every layout must feel deliberate, bespoke, and tailored to the actual product domain. Contains forbidden-pattern catalogs, a 5-stage design workflow, OKLCH colour rules, a motion budget table, replacement principles, a pre-emit checklist, a copy-paste activation prompt library, the H1-H18 luxury hospitality contract (canvas over card, editorial numerals and dot-leader price ledgers, jewel-dot dietary marks, video scrims, concierge dossier, architectural signature footer, graded third-party embeds, per-page archetypes, spatial-truth verification), and the E1-E58 source-code contract (React state and effects, data fetching, lifecycle and leaks, component architecture, TypeScript quality, markup and styling, security and privacy hygiene, performance, testing, and form ownership). Use before building or redesigning any UI, when writing React/Next.js/TypeScript source that should not read as generated, and always for luxury hospitality, Michelin-grade restaurant, or destination-venue work.
-version: "3.5.0"
-argument-hint: "[--scan] [--list] [--clear]"
+description: Design reference contract of 245 AI slop anti-patterns across 18 categories (V/T/C/L/M/P/I/Q/X/A/D/S/R/B/F/DM/H/E) for AI agents to read BEFORE generating UI, paired with a construction workflow, motion/colour/type token tables, and a blocking pre-emit gate. Core objective — avoid low-effort AI-template tropes, boilerplate Bootstrap/SaaS defaults, and unstyled third-party widgets; every layout must feel deliberate, bespoke, and tailored to the actual product domain. Contains forbidden-pattern catalogs, a 5-stage design workflow, OKLCH colour rules, a motion budget table, replacement principles, a pre-emit checklist, a copy-paste activation prompt library, the H1-H18 luxury hospitality contract (canvas over card, editorial numerals and dot-leader price ledgers, jewel-dot dietary marks, video scrims, concierge dossier, architectural signature footer, graded third-party embeds, per-page archetypes, spatial-truth verification), and the E1-E58 source-code contract (React state and effects, data fetching, lifecycle and leaks, component architecture, TypeScript quality, markup and styling, security and privacy hygiene, performance, testing, and form ownership). Use before building or redesigning any UI, when writing React/Next.js/TypeScript source that should not read as generated, and always for luxury hospitality, Michelin-grade restaurant, or destination-venue work. Includes the 38-rule purpose gate with ENERGY/RHYTHM/MOTION dials and a PASS/FAIL delivery gate, plus copywriting, accessibility/mobile, app-screen and code-comment references.
+version: "3.6.0"
 allowed-tools:
   - Read
   - Write
@@ -32,14 +31,7 @@ as a listing is the defect, however polished.
 </role>
 
 <routing>
-
-| Flag | Action | Description |
-|------|--------|-------------|
-| (none) | Scan mode | Scan files for slop indicators (operational skill) |
-| --list | List tracked slop items | Show all previously identified slop with status, grouped by category |
-| --clear | Clear resolved slop entries | Remove tracked slop items from storage |
-| --scan PATH | Scan specific path | Run operational scan (slop-audit) |
-
+This skill takes no flags. It is a knowledge base loaded before UI work, not a scanner. Operational detection, `--scan`, `--list`, and `--clear` belong to `slop-audit`.
 </routing>
 
 <process>
@@ -55,7 +47,7 @@ mkdir -p ./.slop-tracker/notes
 </step>
 
 <step name="reference">
-Provide design reference for AI-assisted UI generation. Show pattern catalog with all 245 patterns across 18 categories. Every finding uses evidence model (Source/Render/Judgment/Confidence) plus severity (blocker/major/nit) and auto_fix boolean tag, logged to slop-log.json under D-category (Design-Token/Drift).
+Provide design reference for AI-assisted UI generation. Show the pattern catalog with all 245 patterns across 18 categories, plus the rule gate, copywriting, accessibility/mobile, app-screen, and code-comment references. This skill does not log findings; that is slop-audit's job.
 </step>
 
 <step name="workflow">
@@ -63,11 +55,11 @@ This skill is the *reference* half. The *construction* half is `references/desig
 
 Run the spec's stages in order:
 
-1. **Brief** — state the one-line Design Read, then decide mode, audience, mood, density, variance, motion intensity, banned list, and the single visual idea, before any markup exists. Record in `.slop-tracker/design-brief.md`.
+1. **Brief** — state the one-line Design Read, then decide mode, audience, mood, density, variance, motion intensity, banned list, and the single visual idea, before any markup exists. Record in `.slop-tracker/design-brief.md`. Set the ENERGY / RHYTHM / MOTION dials and keep them; without written direction, use 1/1/1 and label the output a draft (`references/rule-gate.md`, R-37).
 2. **Constraints** — define motion, colour, and type tokens before components. Components built first inherit ad-hoc values, which is D1-D6 drift by construction.
 3. **Build** — structure follows content; one anchor per section; grid composed from content; states and feedback are part of the component. Build the source with the same discipline: derive rather than synchronise state, declare every effect's cleanup, ship all four fetch branches, validate at the boundary, and keep secrets out of the client.
-4. **Polish** — type pass, colour pass, motion pass, copy pass, in that order.
-5. **Gate** — run the Stage 5 checklist. A failure blocks delivery; it is not a note.
+4. **Polish** — type pass, colour pass, motion pass, copy pass, in that order. The copy pass runs the patterns and guardrails in `references/copywriting.md`; the accessibility pass runs `references/accessibility-mobile.md`, including the contrast checker.
+5. **Gate** — run the Stage 5 checklist. A failure blocks delivery; it is not a note. Run the four-block Delivery Gate in `references/rule-gate.md` alongside it: Hard Gate, Purpose-Gate, Liveliness, Craftsmanship. App screens also run the checklist in `references/app-comments.md`; source comments follow the same file.
 
 The E-category (E1-E58) is the source-side half of the same contract. The render can pass
 every visual check while the source leaks a secret, races a fetch, or carries `any` through
@@ -462,6 +454,12 @@ Full design contract, section-by-section archetype ledger, pre-emit checklist, a
 - references/code-slop-guide.md — Detection method, per-framework equivalents, grep signatures, and enforcement for the E category (E1-E58). Byte-identical in both skills
 - references/prompt-library.md — Copy-paste activation prompts (strategy pass, landing, dashboard, typography, bento, motion, colour, redesign audit, hero, final gate) plus the rejected prompt sets and why
 - references/content-quality-guidelines.md — Quality standards for content evaluation
+- references/regex-debugging.md — Pattern-extraction and regex pitfalls for scanning mixed path styles
+- references/rule-gate.md — The 38-rule purpose gate, Craftsmanship C-1..C-5, ENERGY/RHYTHM/MOTION dials, Design Read, and the four-block PASS/FAIL Delivery Gate. Derived from antislop
+- references/copywriting.md — Copy patterns with before/after rewrites, human-writing guardrails, voice calibration, and the draft/audit/final loop
+- references/accessibility-mobile.md — Contrast formula and table, keyboard and focus, state feedback, 200% zoom, breakpoints, overflow, tap targets, mobile navigation
+- references/app-comments.md — Dashboard and app-screen patterns (stat cards, feeds, charts, table columns, filler data) and code-comment hygiene
+- references/contrast-check.py — WCAG 2.x contrast checker; run `python3 references/contrast-check.py "#FFFFFF" "#777777"` or `--selftest`
 - references/luxury-hospitality-protocol.md — H1-H18 luxury hospitality design contract: forbidden patterns, mandatory codes, section-by-section archetype ledger, pre-emit checklist, exemption rules
 </references>
 
@@ -561,6 +559,8 @@ The agent should:
 This is a reference guide only - no scan tracking, no slop-log.json, no remediation actions. Pure design guidance for AI-assisted UI generation.
 
 ## Integration Notes
+
+v3.6.0 merges the antislop rule system (MIT, `miqdadbadjuber/anti-slop`) as four references: `rule-gate.md` (38 rules in three tiers, C-1..C-5, the three liveliness dials, Design Read, and the four-block Delivery Gate), `copywriting.md` (copy patterns, guardrails, voice calibration), `accessibility-mobile.md` (contrast formula and checker, keyboard, focus, states, reflow), and `app-comments.md` (dashboard/app screens and code comments). Adds `contrast-check.py`. The 245 pattern IDs and their numbering are unchanged: rules govern the decision, patterns describe the defect, and a report cites both.
 
 v3.5.0 appends 78 patterns across one new category and four extended ones, opens the source-code surface, and adds the third shared reference file. ID stability holds: nothing renumbered, H-IDs untouched.
 

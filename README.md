@@ -16,7 +16,9 @@ Eighteen categories, 245 patterns, each with an ID, a detection rule and a repla
 - **Domain:** luxury hospitality and fine dining (H1-H18), activated only when the target is a venue.
 - **Source:** engineering slop (E1-E58) - effects without cleanup, fetch races, secrets in the client bundle, `any` at the trust boundary, god components.
 
-The catalog says what not to build. `references/design-spec.md` says how to build: the five-stage workflow, motion/colour/type token tables, and the pre-emit gate.
+The catalog says what not to build. `references/design-spec.md` says how to build: the five-stage workflow, motion/colour/type token tables, and the pre-emit gate. `references/rule-gate.md` adds the decision layer: 38 rules in three tiers, the ENERGY/RHYTHM/MOTION dials, a Design Read, and a four-block PASS/FAIL Delivery Gate.
+
+Alongside those, four specialised references cover the surfaces a landing-page catalog under-serves: copywriting with before/after rewrites, accessibility and mobile reflow (with a WCAG contrast checker), app and dashboard screens, and code comments.
 
 ## What is in the repo
 
@@ -30,6 +32,11 @@ The catalog says what not to build. `references/design-spec.md` says how to buil
 | `references/luxury-hospitality-protocol.md` | H1-H18 domain contract |
 | `references/content-quality-guidelines.md` | Copy and content quality rules |
 | `references/regex-debugging.md` | Notes for the scanner patterns |
+| `references/rule-gate.md` | 38 rules, three tiers, liveliness dials, Design Read, Delivery Gate |
+| `references/copywriting.md` | Copy patterns, human-writing guardrails, voice calibration |
+| `references/accessibility-mobile.md` | Contrast formula and table, keyboard, focus, states, reflow |
+| `references/app-comments.md` | Dashboard screens and code-comment hygiene |
+| `references/contrast-check.py` | WCAG contrast checker, with a self-test against the table |
 
 ## Install
 
@@ -81,8 +88,10 @@ Created by Aniket Somkuwar. Integrates slop patterns from `miqdadbadjuber/anti-s
 
 v3.5.0 extends the source-code catalog with material from `Vanszs/Anti-AI-UI` (MIT), `design-taste-frontend`, `emilkowalski/skills`, `impeccable` (Apache 2.0) and `leeskills` (MIT): the E category, A9-A16, and the evidence-class and completion-rule discipline.
 
+v3.6.0 merges the antislop rule system (MIT, `miqdadbadjuber/anti-slop`) as four references and a contrast checker. The 245 pattern IDs are unchanged.
+
 Third-party material remains under its own license. See [`LICENSE`](LICENSE) for this repository's terms.
 
 ## Version
 
-3.5.0. The skill frontmatter is the source of truth.
+3.6.0. The skill frontmatter is the source of truth.
